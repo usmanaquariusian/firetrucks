@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import SecondSection from './components/SecondSection';
+import ThirdSection from './components/ThirdSection';
 
 function App() {
   return (
@@ -10,8 +11,10 @@ function App() {
       <Header />
       <HeroSection />
       <SecondSection />
+      <ThirdSection />
     </div>
   );
 }
 
 export default App;
+
