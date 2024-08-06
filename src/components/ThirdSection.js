@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import VideoPlayer from './VideoPlayer';
 
-const SecondSection = () => {
+const Thirdsection = () => {
   return (
     <Box
       sx={{
@@ -57,7 +57,7 @@ const SecondSection = () => {
         type="video/mp4"
         corner="bottom-right"
         clip="circle(100px at center)"
-        size="100px"
+        size="99px"
         showButton={true}
         clip={{
           topLeft: [3, 3],
@@ -113,4 +113,4 @@ const SecondSection = () => {
   );
 };
 
-export default SecondSection;
+export default Thirdsection;
