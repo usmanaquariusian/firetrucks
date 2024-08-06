@@ -3,7 +3,7 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import VideoPlayer from './VideoPlayer';
 
-const SecondSection = () => {
+const ThirdSection = () => {
   return (
     <Box
       sx={{
@@ -113,4 +113,4 @@ const SecondSection = () => {
   );
 };
 
-export default SecondSection;
+export default ThirdSection;
