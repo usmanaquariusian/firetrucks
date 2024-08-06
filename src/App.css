@@ -36,3 +36,53 @@
     transform: rotate(360deg);
   }
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 20px; /* Optional: spacing between grid items */
+  height: 100vh; /* Optional: make the grid container full height */
+  width: 100vh; /* Optional: make the grid container full height */
+  padding-top: 200px;
+}
+
+.grid-item1 {
+  position: relative;
+  background: linear-gradient(to right, #393c41 15%, transparent 15%) top right, /* Top border */
+              linear-gradient(to bottom, #393c41 15%, transparent 15%) top left, /* Left border */
+              linear-gradient(to left, #393c41 15%, transparent 15%) bottom left, /* Bottom border */
+              linear-gradient(to top, #393c41 15%, transparent 15%) bottom left; /* Left border (bottom part) */     
+  background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  background-position: top left, top left, bottom left, bottom right;
+  background-color: #f0f0f004; /* Background color */
+  padding: 10px; /* Padding to ensure content doesn't touch borders */
+   
+}
+.grid-item2 {
+  position: relative;
+  background: linear-gradient(to left, #393c41 15%, transparent 15%) top left, /* Top border */
+              linear-gradient(to top, #393c41 15%, transparent 15%) top right; /* Left border */
+  background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  background-position: top left, top left, bottom left, bottom right;
+  background-color: #f0f0f004; /* Background color */
+  padding: 10px; /* Padding to ensure content doesn't touch borders */
+}
+
+.grid-item3 {
+  background-color: #f0f0f004; /* Optional: background color */
+  border: 1px solid #ccc; /* Optional: border for visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Optional: adjust font size */
+}
+.grid-item4 {
+  background-color: #f0f0f004; /* Optional: background color */
+  border: 1px solid #ccc; /* Optional: border for visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px; /* Optional: adjust font size */
+}

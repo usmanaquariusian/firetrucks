@@ -3,7 +3,11 @@ import React from 'react';
 import { Box, Typography } from '@mui/material';
 import VideoPlayer from './VideoPlayer';
 
+<<<<<<< HEAD
 const Thirdsection = () => {
+=======
+const ThirdSection = () => {
+>>>>>>> 11618b7c6cd5b0140185c52451f93f24673be16e
   return (
     <Box
       sx={{
@@ -113,4 +117,8 @@ const Thirdsection = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Thirdsection;
+=======
+export default ThirdSection;
+>>>>>>> 11618b7c6cd5b0140185c52451f93f24673be16e
