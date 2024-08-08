@@ -2,7 +2,6 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import VideoPlayer from './VideoPlayer';
-import Container from './Container';
 
 const ThirdSection = () => {
   return (

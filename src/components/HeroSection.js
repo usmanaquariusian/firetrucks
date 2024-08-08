@@ -2,7 +2,8 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import heroImage from '../content/images/Cybertruck-Main.avif';
-import Mainbutton from './Mainbutton';
+import MainButton from './MainButton';
+
 const HeroSection = () => {
   return (
     <Box
@@ -20,15 +21,14 @@ const HeroSection = () => {
     >
       <Box textAlign="center">
         <Typography variant="h2">Cybertruck</Typography>
-        <Mainbutton 
-          text="Order " 
+        <MainButton 
+          text="Order Now" 
           background="#121212" 
           hoverBackground="#12121280" 
           textColor="#8e8e8e"
         />
-      </Box> 
-      
-   </Box>
+      </Box>
+    </Box>
   );
 };
 
