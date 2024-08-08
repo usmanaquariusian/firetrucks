@@ -1,11 +1,97 @@
 import React, { useState } from 'react';
-import { Box, Tabs, Tab, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material';
+import { Box, Tabs, Tab, Typography, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Divider } from '@mui/material';
+import { styled } from '@mui/system';
+import CyberIcon from '../content/images/CYBERTRUCK.svg';
+import DimensionImage from '../content/images/dimensions.png';
 
 const tabData = [
-  { label: 'Tab 1', content: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]] },
-  { label: 'Tab 2', content: [[26, 27, 28, 29, 30], [31, 32, 33, 34, 35], [36, 37, 38, 39, 40], [41, 42, 43, 44, 50], [51, 52, 53, 54, 55]] },
-  { label: 'Tab 3', content: [[1, 2, 3, 4, 5], [6, 7, 8, 9, 10], [11, 12, 13, 14, 15], [16, 17, 18, 19, 20], [21, 22, 23, 24, 25]] }
+  { 
+    label: 'CYBERBEAST', 
+    content: [
+      {
+        heading: 'Performance',
+        data: [
+          ['Range (est.)', 'Range (+Range Extender)', 'Acceleration', 'Drive', 'Top Speed'],
+          ['515 km', '705+ km', '2.7 sec² 0-100 km/h', 'All-Wheel Drive', '209 km/h'],
+          ['Towing', '4,990 kg', '', '', '']
+        ]
+      },
+      {
+        heading: 'Dimensions',
+        data: [
+          ['Weight', 'Cargo', 'Wheels', 'Ground Clearance'],
+          ['3,104 kg', '3,423.5 liters', '20"', '406 mm in extract mode'],
+          ['Seating', 'Displays', 'Overall Width', 'Overall Height'],
+          ['5 adults', '18.5" center touchscreen, 9.4" rear touchscreen', 'Folded mirrors: 2,200.7 mm, Extended mirrors: 2,413.3 mm', '1,790.8 mm'],
+          ['Overall Length', 'Image', '', ''],
+          ['5,682.9 mm', <img src={DimensionImage} alt="Dimension" style={{ width: '100%' }} />, '', '']
+        ]
+      }
+    ]
+  },
+  { 
+    label: 'ALL-WHEEL DRIVE', 
+    content: [
+      {
+        heading: 'Performance',
+        data: [
+          ['Metric 1', 'Metric 2', 'Metric 3', 'Metric 4', 'Metric 5'],
+          ['Value 1', 'Value 2', 'Value 3', 'Value 4', 'Value 5'],
+          ['Another Metric', 'Another Value', '', '', '']
+        ]
+      },
+      {
+        heading: 'Dimensions',
+        data: [
+          ['Metric 1', 'Metric 2', 'Metric 3', 'Metric 4'],
+          ['Value 6', 'Value 7', 'Value 8', 'Value 9'],
+          ['Metric', 'Value', '', '']
+        ]
+      }
+    ]
+  },
+  { 
+    label: 'REAR-WHEEL DRIVE', 
+    content: [
+      {
+        heading: 'Performance',
+        data: [
+          ['Metric 1', 'Metric 2', 'Metric 3', 'Metric 4', 'Metric 5'],
+          ['Value 1', 'Value 2', 'Value 3', 'Value 4', 'Value 5'],
+          ['Another Metric', 'Another Value', '', '', '']
+        ]
+      }
+    ]
+  }
 ];
+
+const CustomTypography = styled(Typography)(({ theme }) => ({
+  fontWeight: 'bold',
+  fontSize: '1.2rem',
+  color: '#a2a3a5',
+  marginTop: '20px'
+}));
+
+const CustomTab = styled(Tab)(({ theme }) => ({
+  background: 'black',
+  textAlign: 'center',
+  flexDirection: 'row',
+  alignItems: 'center',
+  width: '20%',
+  color: '#a2a3a5',
+  padding: '5px 20px',
+  borderTop: '2px solid transparent',
+  borderRadius: '1px',
+  '&:hover': {
+    backgroundColor: '#121212',
+    borderTop: '2px solid #a2a3a5',
+  },
+  '&.Mui-selected': {
+    backgroundColor: '#121212',
+    borderTop: '2px solid #a2a3a5',
+    color: '#a2a3a5'
+  }
+}));
 
 const Layout = () => {
   const [selectedTab, setSelectedTab] = useState(0);
@@ -15,30 +101,46 @@ const Layout = () => {
   };
 
   return (
-    <Box sx={{ height: '100vh', display: 'flex', flexDirection: 'column' }}>
-      <Box sx={{ display: 'flex', flexGrow: 1 , alignContent: 'space-around', flexWrap:'wrap'}}>
-        <Box sx={{ width: '30%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2 }}>
-          <Typography variant="h6">LOGO</Typography>
-          <Typography variant="body1">Some Text</Typography>
+    <Box sx={{ height: 'auto', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+      <Box sx={{ width: '80%', display: 'flex', flexDirection: 'column' }}>
+        <Box sx={{ display: 'flex', flexGrow: 1, alignContent: 'center', flexWrap: 'wrap' }}>
+          <Box sx={{ width: '30%', display: 'flex', alignItems: 'center', justifyContent: 'right', gap: 0 }}>
+            <img src={CyberIcon} alt="Logo" style={{ height: '60px', width: 'auto' }} />
+            <CustomTypography variant="body2">SPECS</CustomTypography>
+          </Box>
+          <Box sx={{ width: '70%' }}>
+            <Tabs 
+              value={selectedTab}  
+              onChange={handleChange} 
+              centered 
+              aria-label="custom tabs example"
+              sx={{ 
+                '.MuiTabs-indicator': { 
+                  backgroundColor: 'transparent' 
+                } 
+              }}
+            >
+              {tabData.map((tab, index) => (
+                <CustomTab key={index} label={tab.label} />
+              ))}
+            </Tabs>
+          </Box>
         </Box>
-        <Box sx={{ width: '70%' }}>
-          <Tabs value={selectedTab} variant="fullWidth" onChange={handleChange} centered aria-label="basic tabs example">
-            {tabData.map((tab, index) => (
-              <Tab key={index} label={tab.label} />
-            ))}
-          </Tabs>
+        <Box sx={{ flexGrow: 1, width: '100%' }}>
+          {tabData.map((tab, index) => (
+            <TabPanel value={selectedTab} index={index} key={index}>
+              {tab.content.map((section, sectionIndex) => (
+                <React.Fragment key={sectionIndex}>
+                  <Typography variant="h6" sx={{ color: '#a2a3a5', marginBottom: 2 }}>
+                    {section.heading}
+                  </Typography>
+                  <TableComponent data={section.data} />
+                  {sectionIndex < tab.content.length - 1 && <Divider sx={{ my: 3, borderColor: '#a2a3a5' }} />}
+                </React.Fragment>
+              ))}
+            </TabPanel>
+          ))}
         </Box>
-      </Box>
-      <Box sx={{ flexGrow: 1 }}>
-        <TabPanel value={selectedTab} index={0}>
-          <TableComponent data={tabData[0].content} />
-        </TabPanel>
-        <TabPanel value={selectedTab} index={1}>
-          <TableComponent data={tabData[1].content} />
-        </TabPanel>
-        <TabPanel value={selectedTab} index={2}>
-          <TableComponent data={tabData[2].content} />
-        </TabPanel>
       </Box>
     </Box>
   );
@@ -65,22 +167,20 @@ const TabPanel = (props) => {
 };
 
 const TableComponent = ({ data }) => (
-  <TableContainer component={Paper}>
-    <Table>
+  <TableContainer component={Paper} sx={{ backgroundColor: 'transparent' }}>
+    <Table sx={{ color: '#ffffff', fontSize: '1rem', textTransform: 'uppercase' }}>
       <TableHead>
         <TableRow>
-          <TableCell>Column 1</TableCell>
-          <TableCell>Column 2</TableCell>
-          <TableCell>Column 3</TableCell>
-          <TableCell>Column 4</TableCell>
-          <TableCell>Column 5</TableCell>
+          {data[0].map((header, index) => (
+            <CustomTableCell key={index}>{header}</CustomTableCell>
+          ))}
         </TableRow>
       </TableHead>
       <TableBody>
-        {data.map((row, rowIndex) => (
+        {data.slice(1).map((row, rowIndex) => (
           <TableRow key={rowIndex}>
             {row.map((cell, cellIndex) => (
-              <TableCell key={cellIndex}>{cell}</TableCell>
+              <CustomTableCell key={cellIndex}>{cell}</CustomTableCell>
             ))}
           </TableRow>
         ))}
@@ -88,5 +188,12 @@ const TableComponent = ({ data }) => (
     </Table>
   </TableContainer>
 );
+
+const CustomTableCell = styled(TableCell)(({ theme }) => ({
+  color: '#a2a3a5',
+  fontSize: '0.7rem',
+  textTransform: 'uppercase',
+  borderBottom: 'none', // Optionally remove the bottom border
+}));
 
 export default Layout;
