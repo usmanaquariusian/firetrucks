@@ -41,7 +41,7 @@ const HeroSection = () => {
     alignItems: 'center', // Center items vertically
     width: '100%', // Make the button full width
     color:'#8e8e8e',
-    padding: '5px 20px', // Adjust padding as needed
+    padding: '2px 20px', // Adjust padding as needed
     borderRadius: '1px', // Optional: Add border radius for rounded corners
     '&:hover': {
       backgroundColor: '#12121280', // Darker background on hover
