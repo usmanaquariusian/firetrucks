@@ -2,12 +2,9 @@
 import React from 'react';
 import { Box, Typography } from '@mui/material';
 import VideoPlayer from './VideoPlayer';
+import Container from './Container';
 
-<<<<<<< HEAD
-const Thirdsection = () => {
-=======
 const ThirdSection = () => {
->>>>>>> 11618b7c6cd5b0140185c52451f93f24673be16e
   return (
     <Box
       sx={{
@@ -60,7 +57,6 @@ const ThirdSection = () => {
         src="https://digitalassets.tesla.com/tesla-contents/video/upload/f_auto,q_auto/Cybertruck-Built-For-Any-Planet-Desktop.mp4"
         type="video/mp4"
         corner="bottom-right"
-        clip="circle(100px at center)"
         size="99px"
         showButton={true}
         clip={{
@@ -117,8 +113,4 @@ const ThirdSection = () => {
   );
 };
 
-<<<<<<< HEAD
-export default Thirdsection;
-=======
 export default ThirdSection;
->>>>>>> 11618b7c6cd5b0140185c52451f93f24673be16e
