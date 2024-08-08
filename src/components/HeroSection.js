@@ -1,8 +1,8 @@
 // src/components/HeroSection.js
 import React from 'react';
-import { Box, Typography, Button } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import heroImage from '../content/images/Cybertruck-Main.avif';
-
+import Mainbutton from './Mainbutton';
 const HeroSection = () => {
   return (
     <Box
@@ -20,41 +20,15 @@ const HeroSection = () => {
     >
       <Box textAlign="center">
         <Typography variant="h2">Cybertruck</Typography>
+        <Mainbutton 
+          text="Order " 
+          background="#121212" 
+          hoverBackground="#12121280" 
+          textColor="#8e8e8e"
+        />
+      </Box> 
       
-        
-            <Box textAlign="center"
-            sx={{
-              width:'70%',
-              borderTop: '4px solid #8e8e8e',
-              paddingTop: '1px',
-              borderRadius: '1px', // Optional: Add border radius for rounded corners
-              textAlign: 'center',
-              textAlign: 'center',
-            }}
-          >
-           <Button
-  variant='contained'
-  sx={{
-    background: '#121212', // Transparent background
-    textAlign: 'center',
-    flexDirection: 'row', // Arrange children in a row (not necessary for Button but kept for context)
-    alignItems: 'center', // Center items vertically
-    width: '100%', // Make the button full width
-    color:'#8e8e8e',
-    padding: '5px 20px', // Adjust padding as needed
-    borderRadius: '1px', // Optional: Add border radius for rounded corners
-    '&:hover': {
-      backgroundColor: '#12121280', // Darker background on hover
-    },
-  }}
->
-  Order Now
-</Button>
-
-        </Box>
-    </Box>
-    </Box>
-      
+   </Box>
   );
 };
 
