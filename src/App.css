@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 .App {
   text-align: center;
 }
@@ -44,45 +45,222 @@
   height: 100vh; /* Optional: make the grid container full height */
   width: 100vh; /* Optional: make the grid container full height */
   padding-top: 200px;
+ 
 }
 
 .grid-item1 {
   position: relative;
-  background: linear-gradient(to right, #393c41 15%, transparent 15%) top right, /* Top border */
-              linear-gradient(to bottom, #393c41 15%, transparent 15%) top left, /* Left border */
-              linear-gradient(to left, #393c41 15%, transparent 15%) bottom left, /* Bottom border */
-              linear-gradient(to top, #393c41 15%, transparent 15%) bottom left; /* Left border (bottom part) */     
+  background: linear-gradient(to right, #393c41 8%, transparent 8%) top right, /* Top border */
+              linear-gradient(to bottom, #393c41 8%, transparent 8%) top left, /* Left border */
+              linear-gradient(to left, #393c41 8%, transparent 8%) bottom left, /* Bottom border */
+              linear-gradient(to top, #393c41 8%, transparent 8%) bottom left; /* Left border (bottom part) */     
   background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
   background-repeat: no-repeat;
   background-position: top left, top left, bottom left, bottom right;
-  background-color: #f0f0f004; /* Background color */
   padding: 10px; /* Padding to ensure content doesn't touch borders */
-   
+  width: 520px; 
+  height: 70%;
+ 
+}
+.video{
+    margin-left: 2px;
+    width: 500px; 
+    height: 100%;
+    object-fit: cover; 
+
+}
+.clip-1 {
+
+  background: rgb(0, 0, 0);
+  clip-path:  polygon(
+    0% 0%,   /* Start from 10% down from the top-left corner */
+    0% 0%,   /* Move 10% right from the top-left corner */
+    100% 0%,   /* Move to 90% right from the top-left corner */
+    100% 10%, /* Move to the top-right corner with a 10% down clip */
+    100% 90%, /* Move down to the bottom-right corner with a 10% up clip */
+    100% 100%, /* Move to the bottom-left corner with a 10% left clip */
+    5% 100%, /* Move to the bottom-left corner with a 10% right clip */
+    0% 97%    /* Close the polygon back to the starting point */
+  );
+}
+.clip-2 {
+
+  background: rgb(0, 0, 0);
+  clip-path:  polygon(
+    0% 0%,   /* Start from 10% down from the top-left corner */
+    8% 0%,   /* Move 10% right from the top-left corner */
+    96% 0%,   /* Move to 90% right from the top-left corner */
+    100% 6%, /* Move to the top-right corner with a 10% down clip */
+    100% 9%, /* Move down to the bottom-right corner with a 10% up clip */
+    100% 100%, /* Move to the bottom-left corner with a 10% left clip */
+    0% 100%, /* Move to the bottom-left corner with a 10% right clip */
+    0% 100%    /* Close the polygon back to the starting point */
+  );
 }
 .grid-item2 {
   position: relative;
-  background: linear-gradient(to left, #393c41 15%, transparent 15%) top left, /* Top border */
-              linear-gradient(to top, #393c41 15%, transparent 15%) top right; /* Left border */
-  background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
-  background-repeat: no-repeat;
-  background-position: top left, top left, bottom left, bottom right;
-  background-color: #f0f0f004; /* Background color */
-  padding: 10px; /* Padding to ensure content doesn't touch borders */
+  background: 
+  linear-gradient(to left, #393c41 100%, transparent 100%) top left, /* Top border */
+  linear-gradient(to bottom, #393c41 90%, transparent 100%) right center; /* Left border */
+background-size: 100% 1px, 1px 100%;
+background-repeat: no-repeat;
+background-position: top left,  right center;
+padding: 10px; /* Padding to ensure content doesn't touch borders */
+width: 495px; 
+margin-left: -38px;
+margin-top: -728px;
+height:100%;
+clip-path:  polygon(
+  0% 0%,   /* Start from 10% down from the top-left corner */
+  8% 0%,   /* Move 10% right from the top-left corner */
+  96% 0%,   /* Move to 90% right from the top-left corner */
+  100% 6%, /* Move to the top-right corner with a 10% down clip */
+  100% 9%, /* Move down to the bottom-right corner with a 10% up clip */
+  100% 100%, /* Move to the bottom-left corner with a 10% left clip */
+  0% 100%, /* Move to the bottom-left corner with a 10% right clip */
+  0% 100%    /* Close the polygon back to the starting point */
+);
+
+
 }
 
 .grid-item3 {
-  background-color: #f0f0f004; /* Optional: background color */
-  border: 1px solid #ccc; /* Optional: border for visibility */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px; /* Optional: adjust font size */
+  position: relative;
+  background: 
+    linear-gradient(to left, #393c41 100%, transparent 100%) bottom right, /* Bottom border */
+    linear-gradient(to top, #393c41 80%, transparent 80%) bottom left; /* Right border */
+  background-size: 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right, bottom left;
+  /* padding: 10px; Padding to ensure content doesn't touch borders */
+  width: 520px; 
+  margin-top: -18%;
+  height: 147%;
+  clip-path: polygon(
+    0% 0%, /* Start from 10% down from the top-left corner */
+    10% 0%, /* Move 10% right from the top-left corner */
+    100% 0%, /* Move to 90% right from the top-left corner */
+    100% 10%, /* Move to the top-right corner with a 10% down clip */
+    100% 100%, /* Move down to the bottom-right corner with a 10% up clip */
+    4% 100%, /* Move to the bottom-left corner with a 10% right clip */
+    0% 94% /* Close the polygon back to the starting point */
+  );
+
 }
+
 .grid-item4 {
-  background-color: #f0f0f004; /* Optional: background color */
-  border: 1px solid #ccc; /* Optional: border for visibility */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px; /* Optional: adjust font size */
+  position: relative;
+  background: linear-gradient(to right, #393c41 8%, transparent 8%) top right, /* Top border */
+              linear-gradient(to bottom, #393c41 8%, transparent 8%) top left, /* Left border */
+              linear-gradient(to left, #393c41 8%, transparent 8%) bottom left, /* Bottom border */
+              linear-gradient(to top, #393c41 8%, transparent 8%) bottom left; /* Left border (bottom part) */     
+  background-size: 100% 1px, 1px 100%, 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  background-position: top left, top left, bottom left, bottom right;
+  background-color: #111
+  ; /* Background color */
+  padding: 10px; /* Padding to ensure content doesn't touch borders */
+  margin-left: 567px;
+  margin-top: -46%;
+  width: 520px;
+  height: 517px;
+}
+
+.dotted-background {
+  width: 92%;
+  height: 35vh; /* Adjust height as needed */
+  background: 
+    linear-gradient(to bottom, #302f2f00 , #111), /* Color gradient background */
+    radial-gradient(circle, #7e7d7d75 1px, transparent 1px) repeat, /* Dot pattern */
+    radial-gradient(circle, #f0ebeb00 1px, transparent 1px) repeat; /* Additional dot pattern */
+  background-size: cover, 20px 20px, 20px 20px; /* Size for each background layer */
+  margin-top: -19px;
+  margin-left: -8px;
+}
+.dotted-background2 {
+  width: 100%;
+  height: 40vh;
+  background: 
+    linear-gradient(to bottom, #111, #302f2f00), /* Color gradient background */
+    radial-gradient(circle, #7e7d7d75 1px, transparent 1px) repeat, /* Dot pattern */
+    radial-gradient(circle, #f0ebeb00 1px, transparent 1px) repeat; /* Additional dot pattern */
+  background-size: cover, 20px 20px, 20px 20px; /* Size for each background layer */
+  margin-top: -6px;
+  margin-left: 13px;
+}
+:root {
+  --tds-font-size-70: 30px; /* Define the font size variable */
+  --tds-font-weight-regular: 400; /* Define the font weight variable */
+  --tds-font-size-60: 13px; /* Define the font size variable */
+ 
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto; /* Center the div */
+  padding: 20px;
+  text-align: center; /* Optional: center text and header */
+}
+
+.header {
+  color: #c7c7c7; /* Color of the header text */
+  font-size: var(--tds-font-size-70); /* Font size using CSS variable */
+  font-weight: var(--tds-font-weight-regular); /* Font weight using CSS variable */
+  letter-spacing: 1.4px; /* Spacing between letters */
+  line-height: 34px; /* Line height for the text */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Optional: remove default margin if needed */
+  font-family: 'Roboto', sans-serif;
+  
+}
+.para {
+  color: #7e7e7e; /* Color of the header text */
+  font-size: var(--tds-font-size-60); /* Font size using CSS variable */
+  font-weight: var(--tds-font-weight-regular); /* Font weight using CSS variable */
+  letter-spacing: 0.4px; /* Spacing between letters */
+  line-height: 10px; /* Line height for the text */
+  padding: 0; /* Remove default padding */
+  margin: 0; /* Optional: remove default margin if needed */
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  text-align: justify;
+  z-index: 4
+}
+.right
+{
+  margin:20px 0px 0px -140px;
+}
+.left
+{
+  margin: 72px -48px 0px 100px;
+}
+.para-right
+{
+  margin:20px 0px 0px -9px;
+}
+.para-left
+{
+  float: right;
+  margin:20px 0px 0px -9px;
+  justify-content: flex-end;
+}
+#hr {
+  border-top:1px solid #393c41; 
+  height:100px;     margin-left: -712px;
+  -moz-transform: rotate(45deg);  
+    -o-transform: rotate(45deg);  
+-webkit-transform: rotate(45deg);  
+   -ms-transform: rotate(45deg);  
+       transform: rotate(45deg); 
+}
+
+#hr2 {
+  border-top:1px solid #393c41; 
+  height:100px;     margin-right: -831px;
+  -moz-transform: rotate(45deg);  
+    -o-transform: rotate(45deg);  
+-webkit-transform: rotate(45deg);  
+   -ms-transform: rotate(45deg);  
+       transform: rotate(45deg); 
 }
