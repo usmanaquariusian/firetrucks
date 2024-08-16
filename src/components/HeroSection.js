@@ -19,15 +19,22 @@ const HeroSection = () => {
         color: 'white',
       }}
     >
-      <Box textAlign="center">
-        <Typography variant="h2">Cybertruck</Typography>
-        <Mainbutton 
-          text="Order Now" 
-          background="#121212" 
-          hoverBackground="#12121280" 
-          textColor="#8e8e8e"
-        />
-      </Box>
+    <Box 
+  display="flex" 
+  flexDirection="column" 
+  alignItems="center" 
+  textAlign="center"
+>
+  <Typography variant="h2" marginBottom={40}>Cybertruck</Typography>
+  <Mainbutton 
+    text="Order Now" 
+    background="#121212" 
+    hoverBackground="#12121280" 
+    textColor="#8e8e8e"
+  />
+</Box>
+
+
     </Box>
   );
 };
