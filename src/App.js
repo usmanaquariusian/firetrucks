@@ -5,6 +5,7 @@ import HeroSection from './components/HeroSection';
 import SecondSection from './components/SecondSection';
 import ThirdSection from './components/ThirdSection';
 import FourthSection from './components/FourthSection';
+import SixthSection from './components/SixthSection';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
+      <SixthSection />
     </div>
   );
 }

@@ -264,3 +264,26 @@ clip-path:  polygon(
    -ms-transform: rotate(45deg);  
        transform: rotate(45deg); 
 }
+/* src/VerticalCarousel.css */
+.vertical-carousel-container {
+  overflow: hidden;
+  height: 300px; /* Adjust height as needed */
+  cursor: grab;
+  border: 1px solid #ddd; /* Optional: Add border for better visibility */
+}
+
+.vertical-carousel-content {
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.vertical-carousel-item {
+  display: block;
+  height: 100px; /* Adjust height as needed */
+  margin-bottom: 10px;
+  background-color: #ccc;
+  text-align: center;
+  line-height: 100px; /* Center text vertically */
+  font-size: 24px;
+}
